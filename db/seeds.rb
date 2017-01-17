@@ -16,3 +16,12 @@ Album.delete_all
 Album.create({artist_id: a1.id, name: 'Live in the Chanter'})
 Album.create({artist_id: a3.id, name: 'Purpose'})
 Album.create({artist_id: a3.id, name: 'Beliebe'})
+
+Gig.delete_all
+Venue.delete_all
+
+v1 = Venue.create({name: 'The Chanter', location: 'Bread St'})
+v2 = Venue.create({name: 'Silk', location: 'King Stables Road'})
+
+Gig.create({price: 15, date: '2017-01-17', artist_id: a1.id, venue_id: v1.id})
+Gig.create({price: 1000, date: '2020-02-25', artist_id: a2.id, venue_id: v2.id})
